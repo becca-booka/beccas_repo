@@ -9,6 +9,7 @@ For this task we were asked to create a little online store webpage using html, 
 In order to intsall my project locally you will need the following:
 * Internet connection
 * A code editor, such as [Visual Studio Code](https://code.visualstudio.com/download)
+* git, you can down load it [here](https://git-scm.com/downloads)
 * Within the code you must include a Bootstrap stylesheet link for CSS, which you can find [here](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 
 #### _**Usage**_
