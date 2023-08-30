@@ -1,0 +1,427 @@
+<!--LEVEL 2, LESSON 17: BOOTSTRAP-->
+<!--iNSTRUCTIONS: Create an online shopping page-->
+
+<!--REFERENCES-->
+<!--For some reason the link that we were provided in order to intall bootstrap was not working.
+ So I went to the bootstrap website and used the one they provided
+ https://getbootstrap.com/docs/3.4/getting-started/-->
+
+ <!--had some help to align text inside the colums from stackoverflow.com
+ https://stackoverflow.com/questions/74779593/how-can-i-right-align-column-with-text-and-input-->
+
+ <!--had lots of hep from W3schools for image styling & button styling
+ https://www.w3schools.com/css/css3_images.asp
+ https://www.w3schools.com/css/css3_buttons.asp-->
+
+ <!--got help from getbootstrap.com for text-wrapping
+ https://getbootstrap.com/docs/5.0/utilities/text/-->
+
+ <!--got help from stackoverflow.com for centuring images/text in a column
+ https://stackoverflow.com/questions/74779593/how-can-i-right-align-column-with-text-and-input
+ https://stackoverflow.com/questions/48482944/how-to-fit-an-image-inside-a-bootstrap-3-div--> 
+
+
+
+
+
+<!DOCTYPE html>
+
+<!--open page and declare language-->
+<html lang="en">
+<!--open head section-->
+<head>
+    <!--declare encoding-->
+    <meta charset="UTF-8">
+    <!--install bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!--styling section--> 
+    <style>
+        body{
+            background-image: url(van\ gogh\ almond\ blossoms.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            margin:25px;
+        }
+
+        div.polaroid {
+           width:100%;
+           background-color: white;
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           margin-bottom: 25px;
+        }
+
+        div.container {
+            width:fit-content;
+           text-align:center;
+           padding: 5px 10px;
+        }
+
+        p{
+            align-items: center;
+            margin-right: auto;
+            font-family:'Brush Script MT';
+            font-size:medium;
+            font-weight: 100;
+        }
+
+        img{
+            border:5px solid white;
+        }
+
+        img:hover {
+            transform: scaleX(-1);
+        }
+
+        h1{
+            font-family:'Brush Script MT';
+            font-size: xx-large;
+            color:ivory;
+            font-weight: 100;
+        }
+
+        h2{
+            font-family:'Brush Script MT';
+            color:black;
+            font-weight: 100;
+        }
+
+        h3{
+            font-family: 'Brush Script MT';
+            font-size:xx-large;
+            color:black;
+            font-weight: 100; 
+        }
+
+        label{
+            font-family:'Brush Script MT';
+            font-size: x-large;
+            color: black;
+            font-weight: 100;
+        }
+        
+        button{
+            background-color:rgb(61, 202, 202);
+            border-radius: 8px;
+            border-color:white;
+            color: white;
+            padding: 15px 32px;
+            font-family:'Brush Script MT';
+            font-size: xx-large;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        button:hover{
+            background-color: white; 
+            color: rgb(61, 202, 202);
+        }
+        
+
+    </style>     
+    <!--declare title-->
+    <title>Becca's Brushes webpage</title>
+</head> <!--close head section-->
+
+<!--open body section-->
+<body>
+    <!--create rows-->
+    <!--row_1-->
+    <div class="row">
+        <!--create columns-->
+        <!--column_1-->
+        <div class="col-md-3">
+            <br>
+            <!--create 'register' and 'login' buttons-->
+            <button>Register</button>
+            <br> <!--line break-->
+            <br>
+            <button>Login</button>
+        </div>
+
+        <!--column_2-->
+        <div class="col-md-6">
+            <div class="text-center">
+                <h1>
+                    <img src="becca's brushes logo long2.jpg" class="img-responsive" style="border-radius:8px;"
+                    alt="becca's brushes logo">
+                </h1><br>
+            </div>
+            
+        </div>
+        <!--column3-->
+        <div class="col-md-3 d-flex text-right">
+            <br>
+            <!--create shopping cart button-->
+            <button>Shopping Cart</button>   
+        </div>
+    </div>    
+       
+    <!--row_2-->
+    <div class="row">
+        <!--column1-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <!--insert image-->
+            <div class="polaroid">
+                <img src="glass_dip_pen.jpg" class = "img-responsive" width = "100%"
+                alt="glass dip pen">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Glass dip pen</p>
+                        <p>R450.50</p>
+                    </div>   
+                </div>
+            </div>
+            <button>Add to Cart</button>    
+        </div>
+        <!--column2-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush1.jpg" class = "img-responsive" width = "100%"
+                alt="Pro Arte Miniature Pointed Round Brush Set">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Pro Arte Miniature Pointed Round Brush Set</p>
+                        <p>R491.91</p>
+                    </div>   
+                </div>
+            </div>
+            <button>Add to Cart</button>  
+        </div>
+        <!--column3-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush2.jpg" class = "img-responsive" width = "100%"
+                alt="Princeton Neptune: Synthetic Squirrel Brushes - Quill">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content;">
+                        <p>Princeton Neptune: Synthetic Squirrel Brushes 
+                            - Quill</p>
+                        <p>R129.00 - R905.00</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+        <!--column4-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush3.jpg" class = "img-responsive" width = "100%"
+                alt="da Vinci Cosmotop-Spin Round Brushes">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>da Vinci Cosmotop - Spin Round Brush 5580</p>
+                        <p>R67.20 - R842.80</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <!--row_3-->
+    <div class="row">
+        <!--column1-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush4.jpg" class="img-responsive" width="100%"
+                alt="Creative Mark Scrubber Watercolour Brush Set">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Creative Mark Scrubber Watercolour Brush Set</p>
+                        <p>R115.00</p>
+                    </div>       
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+        
+        <!--column2-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush5.jpg" class="img-responsive" width="100%"
+                alt="Cotman Watercolour Brushes-Winsor & Newton">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Cotman Watercolour Brushes - Winsor & Newton</p>
+                        <p>R115.00 - R1475.00</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!--Column3-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush6.jpg" class="img-responsive" width="100%"
+                alt="da Vinci Maestro Kolinsky Sable Brush series 11">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>da Vinci Maestro Kolinsky Sable Brush - series 11</p>
+                        <p>R195.90 - R2798.60</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div> 
+
+        <!--Column4-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush7.jpg" class="img-responsive" width="100%"
+                alt="Princeton Neptune: Synthetic Squirrel Brushes - Round">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Princeton Neptune: Synthetic Squirrel Brushes - Round</p>
+                        <p>R129.00 - R905.00</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+
+    </div>
+
+    <!--row_4-->
+    <div class="row">
+        <!--column1-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush8.jpg" class="img-responsive" width="100%"
+                alt="French Aqua Brushes - KUM">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>French Aqua Brushes - KUM</p>
+                        <p>R236.00 - R524.00</p>
+                    </div>
+                </div> 
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!--column2-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush9.jpg" class="img-responsive" width="100%"
+                alt="Traditional Round Mop Series 1407 Brushes - Tintoretto">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Traditional Round Mop Series 1407 Brushes - Tintoretto</p>
+                        <p>R299.00 - R1215.00</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!--column3-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush10.jpg" class="img-responsive" width="100%"
+                alt="Memory Point Synthetic Round Brushes - KUM">
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Memory Point Synthetic Round Brushes - KUM</p>
+                        <p>R66.00 - R365.00</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+
+        <!--column4-->
+        <div class="col-md-3 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <div class="polaroid">
+                <img src="brush11.jpg" class="img-responsive" width="100%"
+                alt="Black Velvet Silver Brushes - Round - 3000s" >
+                <div class="container">
+                    <div class="text-wrap" style="width:fit-content">
+                        <p>Black Velvet Silver Brushes - Round - 300s</p>
+                        <p>R215.12 - R2697.61</p>
+                    </div>
+                </div>
+            </div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <!--row_5-->
+    <div class="row">
+        <div class="col-md-8">
+            <!--add a heading asking customer to contact seller-->
+            <h2>Talk to Us!</h2>
+            <br>
+                <h3>Input your contact details below and send us a message if you have any questions! 
+                We'd love to here from you!</h3>
+        <!--create form-->
+            <form>
+
+                <label>First name:</label><br>
+                <input type="text">
+                <br>
+                <br>
+                <label> <b>Last name: </b></lable><br>
+                <input type="text">
+                <br>
+                <br>
+                <label>Email:</label><br>
+                <input type="text">
+                <br>
+                <br>
+                <label><b>Message</b></lable><br>
+                <textarea  rows="5" cols="40" spellcheck="true" maxlength="20" wrap="hard">
+                   write your message here!
+                </textarea>
+            </form>
+        </div>
+
+        <div class="col-md-4 d-flex text-center">
+            <br>
+            <br>
+            <br>
+            <img src="becca's brushes logo.jpg" class="img-responsive" style="border-radius:50%"
+            alt="becca's brushes logo">
+        </div>
+    </div>
+</body>
+</html>
